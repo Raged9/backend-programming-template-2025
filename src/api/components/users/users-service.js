@@ -25,6 +25,10 @@ async function deleteUser(id) {
   return usersRepository.deleteUser(id);
 }
 
+async function login(email, password) {
+  return usersRepository.login(email, password);
+}
+
 module.exports = {
   getUsers,
   getUser,
@@ -32,4 +36,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
+  login,
 };
